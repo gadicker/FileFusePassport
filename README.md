@@ -50,7 +50,7 @@ application:
 
 Created by [Gary Dickerson](http://github.com/gadicker)
 
-Code based on passport-mailchimp by [Brian Falk](http://github.com/brainflake))
+Code based on passport-mailchimp by [Brian Falk](http://github.com/brainflake)
 
 ## License
 
