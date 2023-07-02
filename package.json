@@ -2,7 +2,7 @@
   "name": "passport-hitsend",
   "version": "1.0.0",
   "description": "OAuth2 authentication strategy for HitSend",
-  "main": "index.js",
+  "main": "lib/index.js",
   "directories": {
     "lib": "lib"
   },

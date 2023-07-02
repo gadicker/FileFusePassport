@@ -18,6 +18,9 @@ account and OAuth 2.0 tokens.  The strategy requires a `verify` callback, which
 accepts these credentials and calls `done` providing a user, as well as
 `options` specifying a app ID, app secret, and callback URL.
 
+    const passport = require('passport');
+    const HitSendStrategy = require('passport-hitsend').Stratey;
+
     passport.use(new HitSendStrategy({
         clientID: HitSend_APP_ID,
         clientSecret: HitSend_APP_SECRET,
@@ -25,9 +28,9 @@ accepts these credentials and calls `done` providing a user, as well as
       }, function (accessToken, refreshToken, profile, done) {
         User.findOrCreate({ HitSendId: HitSend.id }, function(err, user) {
           return done(err, user);
-        });
-      }
-    ));
+        };
+      })
+    );
 
 #### Authenticate Requests
 
@@ -37,10 +40,10 @@ authenticate requests.
 For example, as route middleware in an [Express](http://expressjs.com/)
 application:
 
-    app.get('/auth/HitSend', passport.authenticate('HitSend'));
+    app.get('/auth/HitSend', passport.authenticate('HitSendStrategy'));
 
     app.get('/auth/HitSend/callback',
-      passport.authenticate('HitSend', { failureRedirect: '/login' }),
+      passport.authenticate('HitSendStrategy', { failureRedirect: '/login' }),
       function(req, res) {
         // Successul authentication, redirect home.
         res.redirect('/');
