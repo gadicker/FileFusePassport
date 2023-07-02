@@ -1,0 +1,23 @@
+{
+  "name": "passport-hitsend",
+  "version": "1.0.0",
+  "description": "OAuth2 authentication strategy for HitSend",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "hitsend",
+    "passport",
+    "auth",
+    "authentication"
+  ],
+  "author": "Gary Dickerson",
+  "license": "MIT",
+  "dependencies": {
+    "passport-oauth2": "^1.7.0"
+  }
+}
